@@ -1,0 +1,183 @@
+{
+  "meta": {
+    "title": "Profe Pippo — Instituto de Aprendizaje Musical Eufonía",
+    "description": "Music lessons in Apóstoles and Azara. Piano, guitar, saxophone and 25 more instruments. All levels and ages."
+  },
+  "nav": {
+    "home": "Home",
+    "trajectory": "Trajectory",
+    "instruments": "Instruments",
+    "services": "Services",
+    "testimonials": "Testimonials",
+    "contact": "Contact",
+    "instagram_label": "@instituto_musical_eufonia"
+  },
+  "hero": {
+    "title": "Profe Pippo",
+    "subtitle": "Musician, teacher and director of the Instituto de Aprendizaje Musical Eufonía",
+    "bio": "Music has marked my entire life — performing, singing, learning. As a teacher I found that every student has their own pace, and respecting it is the key to a wholesome and lasting learning. Because we can all be musicians.",
+    "cta": "Inquire about lessons"
+  },
+  "trajectory": {
+    "section_title": "Trajectory",
+    "items": [
+      {
+        "period": "1992",
+        "title": "Musical beginnings",
+        "description": "First studies in piano and music reading in Necochea, Buenos Aires, with maestro Omar Eduardo Luayza. First vocal harmony lessons with Viviana Barberón."
+      },
+      {
+        "period": "1998",
+        "title": "Arrival in Misiones",
+        "description": "Family relocation to Apóstoles, Misiones, where he continued his musical development independently."
+      },
+      {
+        "period": "2001 — 2003",
+        "title": "Return to formal studies",
+        "description": "Studies in harmony, music reading, piano and composition with Professor Pamela Chomik (ESMU, Posadas) at Instituto Arco Iris, directed by Laura Mendoza."
+      },
+      {
+        "period": "2004",
+        "title": "Enrollment in the ESMU Technician Program",
+        "description": "Enrollment in the Escuela Superior de Música Technician Program at 6th year level, via preparatory course and integrative-leveling exam."
+      },
+      {
+        "period": "2007",
+        "title": "Relocation to Neuquén",
+        "description": "A new chapter of life and musical development in the city of Neuquén."
+      },
+      {
+        "period": "2009 — 2010",
+        "title": "Saxophone and advanced harmony",
+        "description": "First contact with the saxophone under Maestro Andrés Gélvez. Advanced harmony and piano studies with Julio Vallejos."
+      },
+      {
+        "period": "2012",
+        "title": "Start of teaching career",
+        "description": "Return to Misiones. Beginning of music teaching in Azara and surrounding towns: Garruchos, Concepción de la Sierra, San José, Colonia Liebig and Apóstoles."
+      },
+      {
+        "period": "2016",
+        "title": "Music Teacher Training Program",
+        "description": "Enrollment in the Music Teacher Training Program for primary and secondary levels at Instituto Superior San Agustín."
+      },
+      {
+        "period": "2025",
+        "title": "Graduation — Music Teacher",
+        "description": "Completion and graduation from the Music Teacher Training Program — Instituto Superior San Agustín."
+      },
+      {
+        "period": "Present",
+        "title": "Director — Instituto Eufonía and choirs",
+        "description": "Director of the Children's Choir and the Youth and Adult Choir at Instituto Superior San Agustín. Director of the choir at the missionary center Casa de Dios. Director of the Instituto de Aprendizaje Musical Eufonía, Apóstoles."
+      }
+    ]
+  },
+  "instruments": {
+    "section_title": "Instruments",
+    "items": [
+      "Piano",
+      "Guitar",
+      "Bass",
+      "Drums",
+      "Recorder",
+      "Ukulele",
+      "Clarinet",
+      "Saxophone",
+      "Diatonic Button Accordion",
+      "Piano Accordion",
+      "Violin",
+      "Viola",
+      "Cello",
+      "Double Bass",
+      "Harmonica",
+      "Ocarina",
+      "Xylophone",
+      "Metallophone",
+      "Marimba",
+      "Bombo Legüero",
+      "Cajón Peruano",
+      "Tumbadoras",
+      "Bongo",
+      "Charango",
+      "Quena",
+      "Pincullo",
+      "Siku",
+      "Harp"
+    ]
+  },
+  "services": {
+    "section_title": "Services",
+    "description": "I offer individual in-person lessons for students of all ages — from age 7 onwards — and all levels, both beginners and advanced. My approach is based on respecting each student's pace and process, without rushing stages, to achieve a wholesome and lasting musical development. Because we can all learn to make music.",
+    "coverage": "In-person lessons in Apóstoles and Azara, Misiones.",
+    "availability_title": "Availability",
+    "days": "Tuesday to Friday",
+    "hours_morning": "08:00 to 12:00",
+    "hours_afternoon": "13:00 to 22:00"
+  },
+  "testimonials": {
+    "section_title": "Testimonials",
+    "items": [
+      {
+        "text": "I started from zero, knowing nothing about music, and Profe Pippo was incredibly patient with me. Today I can play my first songs on guitar and I can't believe how fast I learned.",
+        "author": "Martina G.",
+        "role": "Guitar student"
+      },
+      {
+        "text": "My son is 8 years old and it's his first year of lessons. What surprised me most was how the teacher adapted to his pace without pressuring him. Now he looks forward to every class.",
+        "author": "Rodrigo P.",
+        "role": "Parent"
+      },
+      {
+        "text": "I picked up the piano again after 20 years without touching it. I never felt judged for the time I'd been away. Profe Pippo knows exactly how to motivate you and take you to the next level.",
+        "author": "Sandra M.",
+        "role": "Piano student"
+      },
+      {
+        "text": "I wanted to learn saxophone with no prior musical background. Within a few months I was already reading sheet music and playing my first pieces. An experience that exceeded all my expectations.",
+        "author": "Carlos D.",
+        "role": "Saxophone student"
+      }
+    ]
+  },
+  "form": {
+    "section_title": "Contact",
+    "label_name": "Full name",
+    "label_age": "Student's age",
+    "label_instrument": "Instrument of interest",
+    "instrument_placeholder": "— Select an instrument —",
+    "label_other_instrument": "Other instrument",
+    "placeholder_other_instrument": "Specify the instrument",
+    "label_phone": "Phone number",
+    "label_email": "Email",
+    "submit_default": "SEND INQUIRY",
+    "submit_loading": "SENDING...",
+    "error_name": "Please enter your full name.",
+    "error_age": "Please enter an age between 7 and 100.",
+    "error_instrument": "Please select an instrument from the list.",
+    "error_other_instrument": "Please specify the instrument you are interested in.",
+    "error_contact": "Please provide at least one contact method (phone or email).",
+    "error_email_format": "Please enter a valid email address.",
+    "privacy_note": "The data entered in this form is collected by Lucas Jonathan Didolich (Instituto Eufonía) for the sole purpose of responding to your inquiry and coordinating lessons. It will not be shared with third parties. You may request its correction or deletion at any time by writing to institutoeufonia@gmail.com."
+  },
+  "footer": {
+    "name": "Profe Pippo",
+    "copyright": "© 2026 Profe Pippo — Instituto de Aprendizaje Musical Eufonía. All rights reserved.",
+    "instagram_label": "@instituto_musical_eufonia",
+    "credits_text": "Built with love and mate 🧉. Would you like a website like this?",
+    "credits_link_label": "Let's talk",
+    "credits_link_url": "https://osvaldo-zakowicz.netlify.app/",
+    "credits_author": "Copyright © 2026 Zakowicz Osvaldo Emanuel. All rights reserved."
+  },
+  "success_page": {
+    "title": "Inquiry sent!",
+    "body": "Thank you for your message. Profe Pippo will be in touch shortly.",
+    "cta": "Back to home"
+  },
+  "error_page": {
+    "title": "Something went wrong",
+    "body": "We couldn't send your inquiry. Please try again or contact us on Instagram.",
+    "cta": "Back to the form",
+    "instagram_label": "@instituto_musical_eufonia"
+  }
+}
