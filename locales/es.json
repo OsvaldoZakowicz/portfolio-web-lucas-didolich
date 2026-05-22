@@ -1,0 +1,183 @@
+{
+  "meta": {
+    "title": "Profe Pippo — Instituto de Aprendizaje Musical Eufonía",
+    "description": "Clases de música en Apóstoles y Azara. Piano, guitarra, saxofón y 25 instrumentos más. Todos los niveles y edades."
+  },
+  "nav": {
+    "home": "Inicio",
+    "trajectory": "Trayectoria",
+    "instruments": "Instrumentos",
+    "services": "Servicios",
+    "testimonials": "Testimonios",
+    "contact": "Contacto",
+    "instagram_label": "@instituto_musical_eufonia"
+  },
+  "hero": {
+    "title": "Profe Pippo",
+    "subtitle": "Músico, docente y director del Instituto de Aprendizaje Musical Eufonía",
+    "bio": "Toda mi vida estuvo marcada por la música — ejecutando, cantando, aprendiendo. Como docente encontré que cada alumno tiene su propio tiempo, y respetarlo es la clave de un aprendizaje íntegro y duradero. Porque todos podemos ser músicos.",
+    "cta": "Consultar clases"
+  },
+  "trajectory": {
+    "section_title": "Trayectoria",
+    "items": [
+      {
+        "period": "1992",
+        "title": "Inicio musical",
+        "description": "Primeros estudios de piano y lectoescritura musical en Necochea, Buenos Aires, con el maestro Omar Eduardo Luayza. Primeras clases de canto y armonía vocal con Viviana Barberón."
+      },
+      {
+        "period": "1998",
+        "title": "Llegada a Misiones",
+        "description": "Mudanza familiar a Apóstoles, Misiones, donde continuó su desarrollo musical de forma autónoma."
+      },
+      {
+        "period": "2001 — 2003",
+        "title": "Retoma de estudios formales",
+        "description": "Estudios de armonía, lectoescritura, piano y composición con la profesora Pamela Chomik (ESMU, Posadas) en el Instituto Arco Iris, dirigido por Laura Mendoza."
+      },
+      {
+        "period": "2004",
+        "title": "Ingreso a la Tecnicatura — ESMU",
+        "description": "Ingreso a la Tecnicatura de la Escuela Superior de Música en 6to año, mediante cursillo y examen integrador-nivelador."
+      },
+      {
+        "period": "2007",
+        "title": "Traslado a Neuquén",
+        "description": "Nueva etapa de vida y desarrollo musical en la ciudad de Neuquén."
+      },
+      {
+        "period": "2009 — 2010",
+        "title": "Saxofón y armonía avanzada",
+        "description": "Primer contacto con el saxofón bajo la guía del Maestro Andrés Gélvez. Estudios de armonía y piano avanzado con Julio Vallejos."
+      },
+      {
+        "period": "2012",
+        "title": "Inicio de la actividad docente",
+        "description": "Regreso a Misiones. Comienzo de la enseñanza musical en Azara y ciudades aledañas: Garruchos, Concepción de la Sierra, San José, Colonia Liebig y Apóstoles."
+      },
+      {
+        "period": "2016",
+        "title": "Profesorado de Música",
+        "description": "Ingreso al Profesorado de Música para nivel inicial, primario y secundario en el Instituto Superior San Agustín."
+      },
+      {
+        "period": "2025",
+        "title": "Egreso del Profesorado de Música",
+        "description": "Finalización y egreso del Profesorado de Música — Instituto Superior San Agustín."
+      },
+      {
+        "period": "Actualidad",
+        "title": "Director — Instituto Eufonía y coros",
+        "description": "Director del Coro de Niños y del Coro de Jóvenes y Adultos del Instituto Superior San Agustín. Director del Coro de la obra misionera Casa de Dios. Director del Instituto de Aprendizaje Musical Eufonía, Apóstoles."
+      }
+    ]
+  },
+  "instruments": {
+    "section_title": "Instrumentos",
+    "items": [
+      "Piano",
+      "Guitarra",
+      "Bajo",
+      "Batería",
+      "Flauta dulce",
+      "Ukulele",
+      "Clarinete",
+      "Saxofón",
+      "Acordeón diatónica a botones",
+      "Acordeón a piano",
+      "Violín",
+      "Viola",
+      "Violoncello",
+      "Contrabajo",
+      "Armónica",
+      "Ocarina",
+      "Xilofón",
+      "Metalofón",
+      "Marimba",
+      "Bombo legüero",
+      "Cajón peruano",
+      "Tumbadoras",
+      "Bongó",
+      "Charango",
+      "Quena",
+      "Pincullo",
+      "Siku",
+      "Arpa"
+    ]
+  },
+  "services": {
+    "section_title": "Servicios",
+    "description": "Ofrezco clases presenciales individuales para alumnos de todas las edades — desde los 7 años en adelante — y todos los niveles, tanto principiantes como avanzados. Mi enfoque se basa en respetar los tiempos y procesos de cada alumno, sin quemar etapas, para lograr un desarrollo musical íntegro y duradero. Porque todos podemos aprender a hacer música.",
+    "coverage": "Clases presenciales en Apóstoles y Azara, Misiones.",
+    "availability_title": "Disponibilidad",
+    "days": "Martes a viernes",
+    "hours_morning": "08:00 a 12:00",
+    "hours_afternoon": "13:00 a 22:00"
+  },
+  "testimonials": {
+    "section_title": "Testimonios",
+    "items": [
+      {
+        "text": "Empecé de cero, sin saber nada de música, y el Profe Pippo tuvo una paciencia increíble conmigo. Hoy puedo tocar mis primeras canciones en guitarra y no me puedo creer lo rápido que aprendí.",
+        "author": "Martina G.",
+        "role": "Alumna de Guitarra"
+      },
+      {
+        "text": "Mi hijo tiene 8 años y es su primer año de clases. Lo que más me sorprendió fue cómo el profe se adaptó a su ritmo sin presionarlo. Hoy el nene espera con ansias cada clase.",
+        "author": "Rodrigo P.",
+        "role": "Padre de alumno"
+      },
+      {
+        "text": "Retomé el piano después de 20 años sin tocarlo. Nunca me sentí juzgado por el tiempo que estuve sin practicar. El Profe Pippo sabe exactamente cómo motivarte y llevarte al siguiente nivel.",
+        "author": "Sandra M.",
+        "role": "Alumna de Piano"
+      },
+      {
+        "text": "Quería aprender saxofón sin tener ninguna base musical previa. En pocos meses ya estaba leyendo partituras y tocando mis primeras piezas. Una experiencia que superó todas mis expectativas.",
+        "author": "Carlos D.",
+        "role": "Alumno de Saxofón"
+      }
+    ]
+  },
+  "form": {
+    "section_title": "Contacto",
+    "label_name": "Nombre y apellidos",
+    "label_age": "Edad del interesado",
+    "label_instrument": "Instrumento de interés",
+    "instrument_placeholder": "— Seleccioná un instrumento —",
+    "label_other_instrument": "Otro instrumento",
+    "placeholder_other_instrument": "Especificá el instrumento",
+    "label_phone": "Teléfono de contacto",
+    "label_email": "Email",
+    "submit_default": "ENVIAR CONSULTA",
+    "submit_loading": "ENVIANDO...",
+    "error_name": "Ingresá tu nombre y apellidos.",
+    "error_age": "Ingresá una edad entre 7 y 100 años.",
+    "error_instrument": "Seleccioná un instrumento de la lista.",
+    "error_other_instrument": "Especificá el instrumento que te interesa.",
+    "error_contact": "Ingresá al menos un medio de contacto (teléfono o email).",
+    "error_email_format": "Ingresá un email con formato válido.",
+    "privacy_note": "Los datos ingresados en este formulario son recolectados por Lucas Jonathan Didolich (Instituto Eufonía) con el único fin de responder tu consulta y coordinar clases. No serán cedidos a terceros. Podés solicitar su rectificación o eliminación en cualquier momento escribiendo a institutoeufonia@gmail.com. Ley 25.326 de Protección de Datos Personales."
+  },
+  "footer": {
+    "name": "Profe Pippo",
+    "copyright": "© 2026 Profe Pippo — Instituto de Aprendizaje Musical Eufonía. Todos los derechos reservados.",
+    "instagram_label": "@instituto_musical_eufonia",
+    "credits_text": "Hecho con amor y mate 🧉. ¿Te gustaría tener una web como esta?",
+    "credits_link_label": "Hablemos",
+    "credits_link_url": "https://osvaldo-zakowicz.netlify.app/",
+    "credits_author": "Copyright © 2026 Zakowicz Osvaldo Emanuel. Todos los derechos reservados."
+  },
+  "success_page": {
+    "title": "¡Consulta enviada!",
+    "body": "Gracias por tu mensaje. El Profe Pippo se pondrá en contacto a la brevedad.",
+    "cta": "Volver al inicio"
+  },
+  "error_page": {
+    "title": "Algo salió mal",
+    "body": "No pudimos enviar tu consulta. Por favor intentá de nuevo o contactanos por Instagram.",
+    "cta": "Volver al formulario",
+    "instagram_label": "@instituto_musical_eufonia"
+  }
+}
