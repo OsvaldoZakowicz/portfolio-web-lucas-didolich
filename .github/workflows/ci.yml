@@ -12,7 +12,7 @@ jobs:
         with:
           node-version: 20
       - run: npm install -g html-validate
-      - run: html-validate "**/*.html"
+      - run: html-validate --config .html-validate.json "**/*.html"
 
   stylelint:
     runs-on: ubuntu-latest
