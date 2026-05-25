@@ -55,6 +55,78 @@ Agent MUST NOT:
 
 ---
 
+## Local Validation Policy
+
+The following tools are installed globally and are the ONLY validation tools available locally.
+Agent MUST use these tools for acceptance criteria verification.
+
+| Tool          | Version  |
+| ------------- | -------- |
+| html-validate | 11.3.0   |
+| stylelint     | 17.12.0  |
+| eslint        | 10.4.0   |
+| node          | v24.11.0 |
+
+### Rules
+
+- Agent MUST use these tools directly from the command line.
+- Agent MUST NOT install additional packages locally or globally via npm, pnpm, yarn or any other package manager.
+- Agent MUST NOT use `npm audit`, `npx`, `node_modules/.bin` or any package runner.
+- Agent MUST NOT improvise validation with `fs`, `console.log`, `String.includes()` or any Node.js manual check as substitute for linting.
+- Agent MUST NOT retry the same validation check more than once unless a fix was applied between retries.
+- Node.js manual checks via `fs` are allowed ONLY for verifying file existence and JSON parseability, never as linting substitutes.
+
+### Validation commands per file type
+
+HTML files:
+
+```bash
+html-validate --config .html-validate.json "**/*.html"
+```
+
+CSS files:
+
+```bash
+stylelint "assets/css/**/*.css"
+```
+
+JS files:
+
+```bash
+eslint "assets/js/**/*.js"
+```
+
+JSON files:
+
+```bash
+node -e "JSON.parse(require('fs').readFileSync('locales/es.json','utf8')); console.log('ok')"
+```
+
+File existence:
+
+```bash
+node -e "const f=require('fs'); ['index.html','exito.html','error.html'].forEach(p=>console.log(p, f.existsSync(p)?'ok':'MISSING'))"
+```
+
+### CI as final defense
+
+Local validation must pass before every commit.
+CI via GitHub Actions on pull request to `main` is the final and authoritative validation line.
+A passing CI does not replace local validation — both are required.
+
+### Unverifiable criteria
+
+If a criterion cannot be verified with the available tools or Node.js built-ins, agent MUST:
+
+1. Report the criterion as unverifiable with a brief reason.
+2. Continue to the next criterion without retrying.
+3. If all criteria have been processed, finalize and report the full results summary.
+
+Agent MUST NOT block task completion on unverifiable criteria.
+Agent MUST NOT attempt alternative or improvised verification methods.
+
+---
+
 # Task 01 — Establish Minimal Technical Bootstrap
 
 ## Objective
@@ -191,6 +263,9 @@ Implement the exact CI pipeline defined in `AGENTS.md`.
 ## Allowed Files
 
 - `/.github/workflows/ci.yml`
+- `/.html-validate.json`
+- `/.stylelintrc.json`
+- `/eslint.config.js`
 
 ## Requirements
 
@@ -205,6 +280,65 @@ Using:
 - ubuntu-latest
 - Node.js 20
 
+Create required linter configuration files in the repository root.
+
+`.html-validate.json`:
+
+```json
+{
+  "extends": ["html-validate:recommended"],
+  "rules": {
+    "no-trailing-whitespace": "off",
+    "doctype-style": "off",
+    "void-style": "off"
+  }
+}
+```
+
+`.stylelintrc.json`:
+
+```json
+{
+  "extends": ["stylelint-config-standard"],
+  "rules": {
+    "selector-class-pattern": null,
+    "custom-property-empty-line-before": "never"
+  }
+}
+```
+
+`eslint.config.js` — ESLint v9+ format, NOT `.eslintrc.json`:
+
+```js
+export default [
+  {
+    languageOptions: {
+      ecmaVersion: 2022,
+      sourceType: 'module',
+      globals: {
+        window: 'readonly',
+        document: 'readonly',
+        console: 'readonly',
+        fetch: 'readonly',
+        Swiper: 'readonly',
+      },
+    },
+    rules: {
+      'no-var': 'error',
+      'prefer-const': 'error',
+      'no-eval': 'error',
+      'no-unused-vars': 'warn',
+    },
+  },
+];
+```
+
+CI workflow must use explicit config flag for html-validate:
+
+```yaml
+- run: html-validate --config .html-validate.json "**/*.html"
+```
+
 ## Forbidden
 
 - additional workflows
@@ -218,6 +352,10 @@ Using:
 - workflow syntax valid
 - exactly 3 jobs exist
 - workflow matches AGENTS.md contract
+- all three linter config files exist in repository root
+- html-validate job uses `--config .html-validate.json` flag explicitly
+- eslint config uses ESLint v9+ flat config format (`eslint.config.js`)
+- CI passes green on GitHub Actions
 
 ---
 
