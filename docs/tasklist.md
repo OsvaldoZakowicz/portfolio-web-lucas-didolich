@@ -529,6 +529,8 @@ Dynamic sections must include valid empty containers for future rendering:
 
 # Task 05 — Implement exito.html and error.html
 
+# Task 05 — Implement exito.html and error.html
+
 ## Objective
 
 Create post-submit pages exito and error.
@@ -547,6 +549,30 @@ Implement:
 - consistent visual system
 - accessibility compliance
 - navigation back to homepage
+
+Consult `/docs/DESIGN.md` for:
+
+- semantic layout composition
+- Colors
+- Typography
+- Elevation & Depth
+- Shapes
+- responsive structure
+- result pages (exito.html / error.html) considerations
+
+Consult `/docs/fase-4-spec-tecnica.md` for:
+
+- exact HTML contracts (sections 5.11)
+- exact IDs, aria attributes and localization hooks per component
+- exact CSS utility classes per section
+- data-i18n key mapping per element
+
+Localization rules:
+
+- all user-visible text must use localization hooks
+- use `data-i18n` for text nodes
+- use dedicated localization attributes where required
+- avoid hardcoded UI copy unless explicitly required by spec
 
 ## Forbidden
 

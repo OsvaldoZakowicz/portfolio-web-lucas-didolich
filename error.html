@@ -3,25 +3,65 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Error — Instituto de Aprendizaje Musical Eufonía</title>
-    <link
-      rel="stylesheet"
-      href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
-    />
+    <title data-i18n="error_page.title">Algo salió mal</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/assets/css/styles.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
+    />
+
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="/assets/css/styles.css" />
   </head>
-  <body>
-    <div id="app"></div>
+  <body
+    class="bg-[var(--color-bg)] text-[var(--color-text)] min-h-screen flex items-center justify-center p-6"
+  >
+    <div
+      class="bg-[var(--color-surface)] rounded-lg p-10 max-w-md w-full text-center"
+    >
+      <i
+        class="uil uil-exclamation-circle text-5xl text-[var(--color-tertiary)] mb-4"
+      ></i>
+
+      <h1
+        class="font-serif text-[var(--color-text)] text-2xl font-semibold mb-3"
+        data-i18n="error_page.title"
+      >&nbsp;</h1>
+
+      <p
+        class="text-[var(--color-muted)] text-base mb-6"
+        data-i18n="error_page.body"
+      >&nbsp;</p>
+
+      <a
+        href="https://www.instagram.com/instituto_musical_eufonia"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center justify-center gap-2 text-[var(--color-muted)] text-sm hover:text-[var(--color-primary)] transition-colors mb-6"
+      >
+        <i class="uil uil-instagram"></i>
+        <span data-i18n="error_page.instagram_label">&nbsp;</span>
+      </a>
+
+      <a
+        href="/index.html"
+        class="inline-block bg-[var(--color-primary)] text-[var(--color-bg)] font-sans font-medium text-sm tracking-wider px-6 py-3 rounded-lg hover:bg-[var(--color-secondary)] transition-colors"
+        data-i18n="error_page.cta"
+      >&nbsp;</a>
+    </div>
+
     <script type="module">
-      import i18n from '/assets/js/i18n.js';
-      i18n.init();
+      import { init } from '/assets/js/i18n.js';
+      await init();
     </script>
   </body>
 </html>
