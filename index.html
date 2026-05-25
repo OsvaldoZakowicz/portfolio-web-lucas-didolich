@@ -1,28 +1,796 @@
 <!doctype html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Instituto de Aprendizaje Musical Eufonía</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
-    />
+    <title data-i18n="meta.title">title</title>
+    <meta name="description" data-i18n="meta.description" />
+    <meta property="og:title" data-i18n="meta.title" />
+    <meta property="og:description" data-i18n="meta.description" />
+    <meta property="og:image" content="/assets/img/profile.webp" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/assets/css/styles.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="/assets/css/styles.css" />
   </head>
-  <body>
-    <div id="app"></div>
+  <body class="bg-[var(--color-bg)] text-[var(--color-text)]">
+    <aside
+      id="sidebar"
+      class="hidden lg:flex fixed left-0 top-0 h-screen w-[var(--sidebar-width)] flex-col bg-[var(--color-surface)] border-r border-[var(--color-tertiary)]/30 z-40 px-6 py-8"
+    >
+      <p
+        class="font-serif text-[var(--color-primary)] text-xl font-semibold mb-10 leading-tight"
+        data-i18n="footer.name"
+      ></p>
+
+      <nav aria-label="Navegación principal">
+        <ul class="flex flex-col gap-1">
+          <li>
+            <a
+              href="#inicio"
+              data-nav-item="inicio"
+              class="nav-link"
+              data-i18n="nav.home"
+              >&nbsp;</a
+            >
+          </li>
+          <li>
+            <a
+              href="#trayectoria"
+              data-nav-item="trayectoria"
+              class="nav-link"
+              data-i18n="nav.trajectory"
+              >&nbsp;</a
+            >
+          </li>
+          <li>
+            <a
+              href="#instrumentos"
+              data-nav-item="instrumentos"
+              class="nav-link"
+              data-i18n="nav.instruments"
+              >&nbsp;</a
+            >
+          </li>
+          <li>
+            <a
+              href="#servicios"
+              data-nav-item="servicios"
+              class="nav-link"
+              data-i18n="nav.services"
+              >&nbsp;</a
+            >
+          </li>
+          <li>
+            <a
+              href="#testimonios"
+              data-nav-item="testimonios"
+              class="nav-link"
+              data-i18n="nav.testimonials"
+              >&nbsp;</a
+            >
+          </li>
+          <li>
+            <a
+              href="#contacto"
+              data-nav-item="contacto"
+              class="nav-link"
+              data-i18n="nav.contact"
+              >&nbsp;</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <a
+        href="https://www.instagram.com/instituto_musical_eufonia"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="mt-auto flex items-center gap-2 text-[var(--color-muted)] text-sm hover:text-[var(--color-primary)] transition-colors"
+      >
+        <i class="uil uil-instagram text-lg"></i>
+        <span data-i18n="nav.instagram_label">&nbsp;</span>
+      </a>
+    </aside>
+
+    <button
+      id="hamburger-btn"
+      aria-label="Abrir menú"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+      type="button"
+      class="lg:hidden fixed top-4 left-4 z-50 p-2 text-[var(--color-primary)]"
+    >
+      <i class="uil uil-bars text-2xl"></i>
+    </button>
+
+    <div
+      id="mobile-menu"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Menú de navegación"
+      class="lg:hidden fixed inset-0 z-40 bg-[var(--color-surface)] hidden flex-col items-center justify-center"
+    >
+      <button
+        id="close-menu-btn"
+        aria-label="Cerrar menú"
+        type="button"
+        class="absolute top-4 right-4 p-2 text-[var(--color-primary)] text-2xl"
+      >
+        <i class="uil uil-times"></i>
+      </button>
+
+      <nav aria-label="Navegación mobile">
+        <ul class="flex flex-col items-center gap-4 text-lg">
+          <li>
+            <a
+              href="#inicio"
+              data-nav-item="inicio"
+              class="nav-link-mobile"
+              data-i18n="nav.home"
+              >&nbsp;</a
+            >
+          </li>
+          <li>
+            <a
+              href="#trayectoria"
+              data-nav-item="trayectoria"
+              class="nav-link-mobile"
+              data-i18n="nav.trajectory"
+              >&nbsp;</a
+            >
+          </li>
+          <li>
+            <a
+              href="#instrumentos"
+              data-nav-item="instrumentos"
+              class="nav-link-mobile"
+              data-i18n="nav.instruments"
+              >&nbsp;</a
+            >
+          </li>
+          <li>
+            <a
+              href="#servicios"
+              data-nav-item="servicios"
+              class="nav-link-mobile"
+              data-i18n="nav.services"
+              >&nbsp;</a
+            >
+          </li>
+          <li>
+            <a
+              href="#testimonios"
+              data-nav-item="testimonios"
+              class="nav-link-mobile"
+              data-i18n="nav.testimonials"
+              >&nbsp;</a
+            >
+          </li>
+          <li>
+            <a
+              href="#contacto"
+              data-nav-item="contacto"
+              class="nav-link-mobile"
+              data-i18n="nav.contact"
+              >&nbsp;</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <main id="main-content" class="lg:ml-[var(--sidebar-width)]">
+      <section
+        id="inicio"
+        class="min-h-screen flex items-center px-6 lg:px-16 py-16 bg-[var(--color-bg)]"
+      >
+        <div
+          class="max-w-[var(--content-max)] mx-auto w-full flex flex-col lg:flex-row items-center gap-10 lg:gap-16"
+        >
+          <div
+            class="shrink-0 w-48 h-48 lg:w-64 lg:h-64 rounded-full overflow-hidden border-2 border-[var(--color-primary)]/40"
+          >
+            <picture>
+              <source srcset="/assets/img/profile.webp" type="image/webp" />
+              <img
+                src="/assets/img/profile.jpg"
+                alt="Foto de perfil de Lucas Jonathan Didolich, Profe Pippo"
+                class="w-full h-full object-cover"
+                width="256"
+                height="256"
+              />
+            </picture>
+          </div>
+
+          <div class="text-center lg:text-left">
+            <h1
+              class="font-serif text-[var(--color-primary)] text-5xl lg:text-6xl font-bold leading-tight mb-3"
+              data-i18n="hero.title"
+            >
+              &nbsp;
+            </h1>
+            <p
+              class="text-[var(--color-muted)] text-lg mb-5"
+              data-i18n="hero.subtitle"
+            ></p>
+            <p
+              class="text-[var(--color-text)] text-base leading-relaxed mb-8 max-w-prose"
+              data-i18n="hero.bio"
+            ></p>
+            <a
+              href="#contacto"
+              class="inline-block bg-[var(--color-primary)] text-[var(--color-bg)] font-sans font-medium text-sm tracking-wider px-6 py-3 rounded-lg hover:bg-[var(--color-secondary)] transition-colors"
+              data-i18n="hero.cta"
+              >&nbsp;</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="trayectoria"
+        class="py-16 px-6 lg:px-16 bg-[var(--color-surface)]"
+      >
+        <div class="max-w-[var(--content-max)] mx-auto">
+          <h2
+            class="font-serif text-[var(--color-primary)] text-3xl font-bold mb-12"
+            data-i18n="trajectory.section_title"
+          >
+            &nbsp;
+          </h2>
+
+          <ol
+            id="timeline-list"
+            class="relative border-l border-[var(--color-primary)]/30 ml-4 flex flex-col gap-10"
+          ></ol>
+        </div>
+      </section>
+
+      <section
+        id="instrumentos"
+        class="py-16 px-6 lg:px-16 bg-[var(--color-bg)]"
+      >
+        <div class="max-w-[var(--content-max)] mx-auto">
+          <h2
+            class="font-serif text-[var(--color-primary)] text-3xl font-bold mb-10"
+            data-i18n="instruments.section_title"
+          >
+            &nbsp;
+          </h2>
+
+          <ul class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+            <li
+              class="bg-[var(--color-surface)] rounded-lg p-4 border-l-[3px] border-[var(--color-primary)] flex items-center justify-center text-center font-sans font-medium text-sm tracking-wider text-[var(--color-text)]"
+              data-i18n="instruments.items.0"
+            ></li>
+            <li
+              class="bg-[var(--color-surface)] rounded-lg p-4 border-l-[3px] border-[var(--color-primary)] flex items-center justify-center text-center font-sans font-medium text-sm tracking-wider text-[var(--color-text)]"
+              data-i18n="instruments.items.1"
+            ></li>
+            <li
+              class="bg-[var(--color-surface)] rounded-lg p-4 border-l-[3px] border-[var(--color-primary)] flex items-center justify-center text-center font-sans font-medium text-sm tracking-wider text-[var(--color-text)]"
+              data-i18n="instruments.items.2"
+            ></li>
+            <li
+              class="bg-[var(--color-surface)] rounded-lg p-4 border-l-[3px] border-[var(--color-primary)] flex items-center justify-center text-center font-sans font-medium text-sm tracking-wider text-[var(--color-text)]"
+              data-i18n="instruments.items.3"
+            ></li>
+            <li
+              class="bg-[var(--color-surface)] rounded-lg p-4 border-l-[3px] border-[var(--color-primary)] flex items-center justify-center text-center font-sans font-medium text-sm tracking-wider text-[var(--color-text)]"
+              data-i18n="instruments.items.4"
+            ></li>
+            <li
+              class="bg-[var(--color-surface)] rounded-lg p-4 border-l-[3px] border-[var(--color-primary)] flex items-center justify-center text-center font-sans font-medium text-sm tracking-wider text-[var(--color-text)]"
+              data-i18n="instruments.items.5"
+            ></li>
+            <li
+              class="bg-[var(--color-surface)] rounded-lg p-4 border-l-[3px] border-[var(--color-primary)] flex items-center justify-center text-center font-sans font-medium text-sm tracking-wider text-[var(--color-text)]"
+              data-i18n="instruments.items.6"
+            ></li>
+            <li
+              class="bg-[var(--color-surface)] rounded-lg p-4 border-l-[3px] border-[var(--color-primary)] flex items-center justify-center text-center font-sans font-medium text-sm tracking-wider text-[var(--color-text)]"
+              data-i18n="instruments.items.7"
+            ></li>
+            <li
+              class="bg-[var(--color-surface)] rounded-lg p-4 border-l-[3px] border-[var(--color-primary)] flex items-center justify-center text-center font-sans font-medium text-sm tracking-wider text-[var(--color-text)]"
+              data-i18n="instruments.items.8"
+            ></li>
+            <li
+              class="bg-[var(--color-surface)] rounded-lg p-4 border-l-[3px] border-[var(--color-primary)] flex items-center justify-center text-center font-sans font-medium text-sm tracking-wider text-[var(--color-text)]"
+              data-i18n="instruments.items.9"
+            ></li>
+            <li
+              class="bg-[var(--color-surface)] rounded-lg p-4 border-l-[3px] border-[var(--color-primary)] flex items-center justify-center text-center font-sans font-medium text-sm tracking-wider text-[var(--color-text)]"
+              data-i18n="instruments.items.10"
+            ></li>
+            <li
+              class="bg-[var(--color-surface)] rounded-lg p-4 border-l-[3px] border-[var(--color-primary)] flex items-center justify-center text-center font-sans font-medium text-sm tracking-wider text-[var(--color-text)]"
+              data-i18n="instruments.items.11"
+            ></li>
+            <li
+              class="bg-[var(--color-surface)] rounded-lg p-4 border-l-[3px] border-[var(--color-primary)] flex items-center justify-center text-center font-sans font-medium text-sm tracking-wider text-[var(--color-text)]"
+              data-i18n="instruments.items.12"
+            ></li>
+            <li
+              class="bg-[var(--color-surface)] rounded-lg p-4 border-l-[3px] border-[var(--color-primary)] flex items-center justify-center text-center font-sans font-medium text-sm tracking-wider text-[var(--color-text)]"
+              data-i18n="instruments.items.13"
+            ></li>
+            <li
+              class="bg-[var(--color-surface)] rounded-lg p-4 border-l-[3px] border-[var(--color-primary)] flex items-center justify-center text-center font-sans font-medium text-sm tracking-wider text-[var(--color-text)]"
+              data-i18n="instruments.items.14"
+            ></li>
+            <li
+              class="bg-[var(--color-surface)] rounded-lg p-4 border-l-[3px] border-[var(--color-primary)] flex items-center justify-center text-center font-sans font-medium text-sm tracking-wider text-[var(--color-text)]"
+              data-i18n="instruments.items.15"
+            ></li>
+            <li
+              class="bg-[var(--color-surface)] rounded-lg p-4 border-l-[3px] border-[var(--color-primary)] flex items-center justify-center text-center font-sans font-medium text-sm tracking-wider text-[var(--color-text)]"
+              data-i18n="instruments.items.16"
+            ></li>
+            <li
+              class="bg-[var(--color-surface)] rounded-lg p-4 border-l-[3px] border-[var(--color-primary)] flex items-center justify-center text-center font-sans font-medium text-sm tracking-wider text-[var(--color-text)]"
+              data-i18n="instruments.items.17"
+            ></li>
+            <li
+              class="bg-[var(--color-surface)] rounded-lg p-4 border-l-[3px] border-[var(--color-primary)] flex items-center justify-center text-center font-sans font-medium text-sm tracking-wider text-[var(--color-text)]"
+              data-i18n="instruments.items.18"
+            ></li>
+            <li
+              class="bg-[var(--color-surface)] rounded-lg p-4 border-l-[3px] border-[var(--color-primary)] flex items-center justify-center text-center font-sans font-medium text-sm tracking-wider text-[var(--color-text)]"
+              data-i18n="instruments.items.19"
+            ></li>
+            <li
+              class="bg-[var(--color-surface)] rounded-lg p-4 border-l-[3px] border-[var(--color-primary)] flex items-center justify-center text-center font-sans font-medium text-sm tracking-wider text-[var(--color-text)]"
+              data-i18n="instruments.items.20"
+            ></li>
+            <li
+              class="bg-[var(--color-surface)] rounded-lg p-4 border-l-[3px] border-[var(--color-primary)] flex items-center justify-center text-center font-sans font-medium text-sm tracking-wider text-[var(--color-text)]"
+              data-i18n="instruments.items.21"
+            ></li>
+            <li
+              class="bg-[var(--color-surface)] rounded-lg p-4 border-l-[3px] border-[var(--color-primary)] flex items-center justify-center text-center font-sans font-medium text-sm tracking-wider text-[var(--color-text)]"
+              data-i18n="instruments.items.22"
+            ></li>
+            <li
+              class="bg-[var(--color-surface)] rounded-lg p-4 border-l-[3px] border-[var(--color-primary)] flex items-center justify-center text-center font-sans font-medium text-sm tracking-wider text-[var(--color-text)]"
+              data-i18n="instruments.items.23"
+            ></li>
+            <li
+              class="bg-[var(--color-surface)] rounded-lg p-4 border-l-[3px] border-[var(--color-primary)] flex items-center justify-center text-center font-sans font-medium text-sm tracking-wider text-[var(--color-text)]"
+              data-i18n="instruments.items.24"
+            ></li>
+            <li
+              class="bg-[var(--color-surface)] rounded-lg p-4 border-l-[3px] border-[var(--color-primary)] flex items-center justify-center text-center font-sans font-medium text-sm tracking-wider text-[var(--color-text)]"
+              data-i18n="instruments.items.25"
+            ></li>
+            <li
+              class="bg-[var(--color-surface)] rounded-lg p-4 border-l-[3px] border-[var(--color-primary)] flex items-center justify-center text-center font-sans font-medium text-sm tracking-wider text-[var(--color-text)]"
+              data-i18n="instruments.items.26"
+            ></li>
+            <li
+              class="bg-[var(--color-surface)] rounded-lg p-4 border-l-[3px] border-[var(--color-primary)] flex items-center justify-center text-center font-sans font-medium text-sm tracking-wider text-[var(--color-text)]"
+              data-i18n="instruments.items.27"
+            ></li>
+          </ul>
+        </div>
+      </section>
+
+      <section
+        id="servicios"
+        class="py-16 px-6 lg:px-16 bg-[var(--color-surface)]"
+      >
+        <div class="max-w-[var(--content-max)] mx-auto">
+          <h2
+            class="font-serif text-[var(--color-primary)] text-3xl font-bold mb-10"
+            data-i18n="services.section_title"
+          >
+            &nbsp;
+          </h2>
+
+          <div class="flex flex-col lg:flex-row gap-10 lg:gap-16">
+            <div class="flex-1">
+              <p
+                class="text-[var(--color-text)] text-base leading-relaxed mb-4"
+                data-i18n="services.description"
+              ></p>
+              <p
+                class="text-[var(--color-muted)] text-sm"
+                data-i18n="services.coverage"
+              ></p>
+            </div>
+
+            <div class="shrink-0 lg:w-64 bg-[var(--color-bg)] rounded-lg p-6">
+              <div class="flex items-center gap-2 mb-4">
+                <i
+                  class="uil uil-clock text-[var(--color-primary)] text-xl"
+                ></i>
+                <h3
+                  class="font-serif text-[var(--color-text)] text-xl font-semibold"
+                  data-i18n="services.availability_title"
+                >
+                  &nbsp;
+                </h3>
+              </div>
+              <p
+                class="text-[var(--color-primary)] text-sm font-medium tracking-wider mb-3"
+                data-i18n="services.days"
+              ></p>
+              <p
+                class="text-[var(--color-text)] text-base"
+                data-i18n="services.hours_morning"
+              ></p>
+              <p
+                class="text-[var(--color-text)] text-base"
+                data-i18n="services.hours_afternoon"
+              ></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="testimonios"
+        class="py-16 px-6 lg:px-16 bg-[var(--color-bg)]"
+      >
+        <div class="max-w-[var(--content-max)] mx-auto">
+          <h2
+            class="font-serif text-[var(--color-primary)] text-3xl font-bold mb-10"
+            data-i18n="testimonials.section_title"
+          >
+            &nbsp;
+          </h2>
+
+          <div class="swiper relative">
+            <div class="swiper-wrapper"></div>
+
+            <button
+              type="button"
+              class="swiper-button-prev"
+              aria-label="Testimonio anterior"
+            ></button>
+            <button
+              type="button"
+              class="swiper-button-next"
+              aria-label="Testimonio siguiente"
+            ></button>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="contacto"
+        class="py-16 px-6 lg:px-16 bg-[var(--color-surface)]"
+      >
+        <div class="max-w-[var(--content-max)] mx-auto">
+          <h2
+            class="font-serif text-[var(--color-primary)] text-3xl font-bold mb-10"
+            data-i18n="form.section_title"
+          >
+            &nbsp;
+          </h2>
+
+          <div class="max-w-[var(--form-max)] mx-auto">
+            <form
+              id="contact-form"
+              name="contacto"
+              method="POST"
+              action="/exito.html"
+              data-netlify="true"
+              data-netlify-honeypot="bot-field"
+              data-netlify-error="/error.html"
+              novalidate
+            >
+              <p class="hidden" aria-hidden="true">
+                <label
+                  >No completar:
+                  <input
+                    type="text"
+                    name="bot-field"
+                    tabindex="-1"
+                    autocomplete="off"
+                  />
+                </label>
+              </p>
+
+              <div class="form-group mb-5">
+                <label
+                  for="field-name"
+                  class="form-label"
+                  data-i18n="form.label_name"
+                ></label>
+                <input
+                  id="field-name"
+                  name="nombre"
+                  type="text"
+                  class="form-input w-full"
+                  aria-describedby="error-name"
+                  autocomplete="name"
+                />
+                <span
+                  id="error-name"
+                  class="form-error"
+                  role="alert"
+                  aria-live="polite"
+                ></span>
+              </div>
+
+              <div class="form-group mb-5">
+                <label
+                  for="field-age"
+                  class="form-label"
+                  data-i18n="form.label_age"
+                ></label>
+                <input
+                  id="field-age"
+                  name="edad"
+                  type="number"
+                  min="7"
+                  max="100"
+                  step="1"
+                  class="form-input w-full"
+                  aria-describedby="error-age"
+                />
+                <span
+                  id="error-age"
+                  class="form-error"
+                  role="alert"
+                  aria-live="polite"
+                ></span>
+              </div>
+
+              <div class="form-group mb-5">
+                <label
+                  for="field-instrument"
+                  class="form-label"
+                  data-i18n="form.label_instrument"
+                ></label>
+                <select
+                  id="field-instrument"
+                  name="instrumento"
+                  class="form-input w-full"
+                  aria-describedby="error-instrument"
+                >
+                  <option
+                    value=""
+                    disabled
+                    selected
+                    data-i18n="form.instrument_placeholder"
+                  ></option>
+                  <option value="Piano">Piano</option>
+                  <option value="Guitarra">Guitarra</option>
+                  <option value="Bajo">Bajo</option>
+                  <option value="Batería">Batería</option>
+                  <option value="Flauta dulce">Flauta dulce</option>
+                  <option value="Ukulele">Ukulele</option>
+                  <option value="Clarinete">Clarinete</option>
+                  <option value="Saxofón">Saxofón</option>
+                  <option value="Acordeón diatónica a botones">
+                    Acordeón diatónica a botones
+                  </option>
+                  <option value="Acordeón a piano">Acordeón a piano</option>
+                  <option value="Violín">Violín</option>
+                  <option value="Viola">Viola</option>
+                  <option value="Violoncello">Violoncello</option>
+                  <option value="Contrabajo">Contrabajo</option>
+                  <option value="Armónica">Armónica</option>
+                  <option value="Ocarina">Ocarina</option>
+                  <option value="Xilofón">Xilofón</option>
+                  <option value="Metalofón">Metalofón</option>
+                  <option value="Marimba">Marimba</option>
+                  <option value="Bombo legüero">Bombo legüero</option>
+                  <option value="Cajón peruano">Cajón peruano</option>
+                  <option value="Tumbadoras">Tumbadoras</option>
+                  <option value="Bongó">Bongó</option>
+                  <option value="Charango">Charango</option>
+                  <option value="Quena">Quena</option>
+                  <option value="Pincullo">Pincullo</option>
+                  <option value="Siku">Siku</option>
+                  <option value="Arpa">Arpa</option>
+                  <option value="otro">Otro instrumento...</option>
+                </select>
+                <span
+                  id="error-instrument"
+                  class="form-error"
+                  role="alert"
+                  aria-live="polite"
+                ></span>
+              </div>
+
+              <div id="other-instrument-group" class="form-group mb-5 hidden">
+                <label
+                  for="field-other-instrument"
+                  class="form-label"
+                  data-i18n="form.label_other_instrument"
+                ></label>
+                <input
+                  id="field-other-instrument"
+                  name="otro_instrumento"
+                  type="text"
+                  class="form-input w-full"
+                  aria-describedby="error-other-instrument"
+                  data-i18n-placeholder="form.placeholder_other_instrument"
+                />
+                <span
+                  id="error-other-instrument"
+                  class="form-error"
+                  role="alert"
+                  aria-live="polite"
+                ></span>
+              </div>
+
+              <div class="form-group mb-5">
+                <label
+                  for="field-phone"
+                  class="form-label"
+                  data-i18n="form.label_phone"
+                ></label>
+                <input
+                  id="field-phone"
+                  name="telefono"
+                  type="tel"
+                  class="form-input w-full"
+                  aria-describedby="error-contact"
+                  autocomplete="tel"
+                />
+              </div>
+
+              <div class="form-group mb-5">
+                <label
+                  for="field-email"
+                  class="form-label"
+                  data-i18n="form.label_email"
+                ></label>
+                <input
+                  id="field-email"
+                  name="email"
+                  type="email"
+                  class="form-input w-full"
+                  aria-describedby="error-contact error-email-format"
+                  autocomplete="email"
+                />
+                <span
+                  id="error-contact"
+                  class="form-error"
+                  role="alert"
+                  aria-live="polite"
+                ></span>
+                <span
+                  id="error-email-format"
+                  class="form-error"
+                  role="alert"
+                  aria-live="polite"
+                ></span>
+              </div>
+
+              <p
+                class="text-[var(--color-muted)] text-xs leading-relaxed mb-6"
+                data-i18n="form.privacy_note"
+              ></p>
+
+              <button
+                id="submit-btn"
+                type="submit"
+                class="w-full bg-[var(--color-primary)] text-[var(--color-bg)] font-sans font-medium text-sm tracking-wider py-3 px-6 rounded-lg hover:bg-[var(--color-secondary)] transition-colors disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-[var(--color-primary)]"
+              >
+                <span id="submit-label" data-i18n="form.submit_default"
+                  >&nbsp;</span
+                >
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer
+      id="footer"
+      class="border-t border-[var(--color-tertiary)]/40 py-8 px-6 lg:px-16 bg-[var(--color-bg)]"
+    >
+      <div
+        class="max-w-[var(--content-max)] mx-auto flex flex-col lg:flex-row items-center justify-between gap-4 text-center lg:text-left"
+      >
+        <p
+          class="font-sans text-[var(--color-primary)] text-sm font-medium tracking-wider"
+          data-i18n="footer.name"
+        ></p>
+
+        <nav aria-label="Navegación del footer">
+          <ul class="flex flex-wrap justify-center gap-4">
+            <li>
+              <a href="#inicio" class="footer-link" data-i18n="nav.home"
+                >&nbsp;</a
+              >
+            </li>
+            <li>
+              <a
+                href="#trayectoria"
+                class="footer-link"
+                data-i18n="nav.trajectory"
+                >&nbsp;</a
+              >
+            </li>
+            <li>
+              <a
+                href="#instrumentos"
+                class="footer-link"
+                data-i18n="nav.instruments"
+                >&nbsp;</a
+              >
+            </li>
+            <li>
+              <a href="#servicios" class="footer-link" data-i18n="nav.services"
+                >&nbsp;</a
+              >
+            </li>
+            <li>
+              <a
+                href="#testimonios"
+                class="footer-link"
+                data-i18n="nav.testimonials"
+                >&nbsp;</a
+              >
+            </li>
+            <li>
+              <a href="#contacto" class="footer-link" data-i18n="nav.contact"
+                >&nbsp;</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <a
+          href="https://www.instagram.com/instituto_musical_eufonia"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex items-center gap-1 text-[var(--color-muted)] text-sm hover:text-[var(--color-primary)] transition-colors"
+        >
+          <i class="uil uil-instagram"></i>
+          <span data-i18n="footer.instagram_label">&nbsp;</span>
+        </a>
+
+        <p
+          class="text-[var(--color-muted)] text-xs"
+          data-i18n="footer.copyright"
+        ></p>
+
+        <p class="text-[var(--color-muted)] text-xs">
+          <span data-i18n="footer.credits_text">&nbsp;</span>
+          <a
+            href="https://osvaldo-zakowicz.netlify.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-[var(--color-primary)] hover:text-[var(--color-secondary)] transition-colors ml-1"
+            data-i18n="footer.credits_link_label"
+            >&nbsp;</a
+          >
+        </p>
+
+        <p
+          class="text-[var(--color-muted)] text-xs"
+          data-i18n="footer.credits_author"
+        ></p>
+      </div>
+    </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script type="module" src="/assets/js/main.js"></script>
   </body>
