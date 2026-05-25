@@ -434,6 +434,7 @@ This task may substantially extend the minimal bootstrap HTML created in Task 01
 ## Allowed Files
 
 - `/index.html`
+- `/assets/css/styles.css`
 
 ## Requirements
 
