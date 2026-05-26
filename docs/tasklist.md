@@ -529,8 +529,6 @@ Dynamic sections must include valid empty containers for future rendering:
 
 # Task 05 — Implement exito.html and error.html
 
-# Task 05 — Implement exito.html and error.html
-
 ## Objective
 
 Create post-submit pages exito and error.
@@ -592,13 +590,14 @@ Localization rules:
 ## Objective
 
 Implement foundational visual system.
-Extend the minimal CSS reset created in Task 01.
 
 ## Allowed Files
 
 - `/assets/css/styles.css`
 
 ## Requirements
+
+Take into account the classes already defined in each HTML element of index.html, exito.html, and error.html
 
 Implement:
 
@@ -619,6 +618,10 @@ Visual implementation must follow `/docs/DESIGN.md`. Including:
 - shape language
 - elevation rules
 
+Consult `/docs/fase-4-spec-tecnica.md` for:
+
+- Section 2.4 Style strategy, CSS block with root variables, and global smooth scroll configuration
+
 ## Forbidden
 
 - animations
@@ -626,6 +629,7 @@ Visual implementation must follow `/docs/DESIGN.md`. Including:
 - glassmorphism
 - excessive !important
 - JS-driven styling
+- Remove existing CSS, unless it conflicts with DESIGN.
 
 ## Acceptance Criteria
 
